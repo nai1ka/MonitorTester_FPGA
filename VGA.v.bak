@@ -1,0 +1,32 @@
+module VGA(
+input clock 25MHz,
+output vsync,
+output hsync);
+
+reg [9:0] xCounter = 0;  // horizontal counter
+reg [9:0] yCounter = 0;  // Vertical counter
+
+always @(posedge clk25MHz)  // horizontal counter
+	begin 
+		if (xCounter < 799)
+			xCounter <= xCounter + 1;
+		else
+			xCounter <= 0;              
+	end  
+	
+	always @ (posedge clk25MHz)  // vertical counter
+		begin 
+			if (xCounter == 799)  // only counts up 1 count after horizontal finishes 800 counts
+				begin
+					if (yCounter < 525)  // vertical counter (including off-screen vertical 45 pixels) total of 525 pixels
+						yCounter <= yCounter + 1;
+					else
+						yCounter <= 0;              
+				end  
+		end  
+
+	assign hsync = (counter_x >= 0 && counter_x < 96) ? 1:0;  // hsync high for 96 counts                                                 
+	assign vsync = (counter_y >= 0 && counter_y < 2) ? 1:0;   // vsync high for 2 counts
+
+
+endmodule

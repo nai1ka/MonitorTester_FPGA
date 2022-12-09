@@ -1,0 +1,15 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/unnamed.qsys --synthesis=VERILOG --output-directory=/home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/unnamed/synthesis --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading VGA_Tester/unnamed.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 21.1]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
+Info: in_system_sources_probes_0: "unnamed" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: unnamed: Done "unnamed" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

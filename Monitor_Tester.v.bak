@@ -1,0 +1,99 @@
+
+module Monitor_Tester(
+   clock50MHz,
+   switches,
+   red,
+	blue,
+	green,
+   hsync,
+   vsync
+);
+input  clock50MHz;     // Clock signal - 50 MHz
+input  [1:0] switches; // switches for chooosing mode
+output reg [3:0] red;
+output reg [3:0] blue;
+output reg [3:0] green; 
+output  hsync;   
+output  vsync;  
+
+reg [9:0] h_counter;     
+reg [9:0] v_counter;   
+
+reg[27:0] my_count;
+
+reg   flag;
+wire  isOverflowH;
+wire  isOVerflowV;
+wire  dat_act;
+wire  hsync;
+wire  vsync;
+reg  clock25MHz;
+
+parameter hsync_pulse   = 10'd95, // Horizontal sync pulse
+   hdata_begin  = 10'd143, // Horizontal data begins (Image can be displayed)
+   hdata_end  = 10'd783, // Horizontal data ends (Image can not be more displayed)
+   hpixel_end  = 10'd799, // End of all horizontal pixels
+   vsync_pulse  = 10'd1, // Vertical sync pulse
+   vdata_begin  = 10'd34, // Vertical data begins (Image can be displayed)
+   vdata_end  = 10'd514, //  Vertical data ends (Image can not be more displayed)
+   vpixel_end  = 10'd524; // End of all vertical pixels
+
+
+always @(posedge clock50MHz)  //Convert 50MHz to 25 MHz (used by VGA)
+begin
+ clock25MHz = ~clock25MHz;
+  my_count<=my_count+1;
+end
+
+    
+always @(posedge clock25MHz)
+begin
+ if (isOverflowH)
+  h_counter <= 10'd0;
+ else
+  h_counter <= h_counter + 10'd1;
+end
+
+assign isOverflowH = (h_counter == hpixel_end); // Check if h_counter is more than 799
+
+always @(posedge clock25MHz)
+begin
+ if (isOverflowH) // Check if displayed most right pixel
+ begin
+  if (isOverflowV)
+   v_counter <= 10'd0;
+  else
+   v_counter <= v_counter + 10'd1;
+ end
+end
+assign  isOverflowV = (v_counter == vpixel_end);
+//���ݡ�ͬ���ź���
+assign canDisplayImage =    ((h_counter >= hdata_begin) && (h_counter < hdata_end))
+     && ((v_counter >= vdata_begin) && (v_counter < vdata_end)); // Check if image can be displayed
+assign hsync = (h_counter > hsync_pulse);
+assign vsync = (v_counter > vsync_pulse);
+
+always @(switches)
+begin
+case (switches)
+2'b00:	
+	begin
+	red = 4'h0;
+	green = 4'h0;
+	blue = 4'h0;
+	end
+2'b01:
+	begin 
+	red = 4'h0;
+	green = (canDisplayImage) ? 4'hF : 4'h0; 
+	end
+2'b10:
+begin
+	green = 4'h0;
+	red = (canDisplayImage) ? 4'hF : 4'h0; 
+	end
+endcase
+end	
+  
+endmodule
+

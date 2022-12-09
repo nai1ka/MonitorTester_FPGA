@@ -1,0 +1,20 @@
+module gradient(
+input x,
+input y,
+output reg red,
+output reg green,
+output reg blue);
+integer i;
+
+always @(x|y):
+begin
+	for(i = 0;i <16; i = i+1)begin
+	red = i;
+	green=0;
+	blue=0;
+	
+	end
+end
+
+
+endmodule
