@@ -146,7 +146,7 @@ gridPattern gridPattern(x,y,red6,green6,blue6);
 wire [9:0] red7;
 wire[9:0] green7;
 wire [9:0] blue7;
-screenSaverPattern screenSavePattern(clock25Mhz,clock50MHz, btn_next, x,y,red7,green7,blue7);
+screenSaverPattern screenSavePattern(clock25MHz,clock50MHz, btn_next, x,y,red7,green7,blue7);
 
 always @(switches)
 begin

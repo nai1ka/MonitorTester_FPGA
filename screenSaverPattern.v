@@ -12,22 +12,16 @@ output [3:0] blue
 	reg [9:0] ballX =100;
 	reg [9:0] ballY = 100;
 	reg [10:0] counter;
-	reg [15:0] prescaler;
+	reg [30:0] prescaler;
 
 always @(posedge clock25MHz)
 begin
  prescaler <= prescaler + 1;
-  if (prescaler == 0)
+  if (prescaler == 1000000)
   begin
-  if (~ reset)
-
- begin
-
- ballX <= ballX + 1;
-
- end
-	
+   ballX <= ballX + 1;
 end
+	if(prescaler>1000000) prescaler<=0;
 end
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_Tester
-Fri Dec  9 14:50:09 2022
+Fri Dec  9 16:32:45 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -58,15 +58,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec  9 14:50:09 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  9 16:32:45 2022       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; VGA_Tester                                  ;
 ; Top-level Entity Name              ; Monitor_Tester                              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 216                                         ;
-;     Total combinational functions  ; 209                                         ;
-;     Dedicated logic registers      ; 82                                          ;
-; Total registers                    ; 82                                          ;
+; Total logic elements               ; 308                                         ;
+;     Total combinational functions  ; 301                                         ;
+;     Dedicated logic registers      ; 123                                         ;
+; Total registers                    ; 123                                         ;
 ; Total pins                         ; 28                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -208,20 +208,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                    ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 216                                                                                                      ;
+; Estimated Total logic elements              ; 308                                                                                                      ;
 ;                                             ;                                                                                                          ;
-; Total combinational functions               ; 209                                                                                                      ;
+; Total combinational functions               ; 301                                                                                                      ;
 ; Logic element usage by number of LUT inputs ;                                                                                                          ;
-;     -- 4 input functions                    ; 108                                                                                                      ;
-;     -- 3 input functions                    ; 14                                                                                                       ;
-;     -- <=2 input functions                  ; 87                                                                                                       ;
+;     -- 4 input functions                    ; 111                                                                                                      ;
+;     -- 3 input functions                    ; 41                                                                                                       ;
+;     -- <=2 input functions                  ; 149                                                                                                      ;
 ;                                             ;                                                                                                          ;
 ; Logic elements by mode                      ;                                                                                                          ;
-;     -- normal mode                          ; 143                                                                                                      ;
-;     -- arithmetic mode                      ; 66                                                                                                       ;
+;     -- normal mode                          ; 162                                                                                                      ;
+;     -- arithmetic mode                      ; 139                                                                                                      ;
 ;                                             ;                                                                                                          ;
-; Total registers                             ; 82                                                                                                       ;
-;     -- Dedicated logic registers            ; 82                                                                                                       ;
+; Total registers                             ; 123                                                                                                      ;
+;     -- Dedicated logic registers            ; 123                                                                                                      ;
 ;     -- I/O registers                        ; 0                                                                                                        ;
 ;                                             ;                                                                                                          ;
 ; I/O pins                                    ; 28                                                                                                       ;
@@ -232,9 +232,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                                        ;
 ;                                             ;                                                                                                          ;
 ; Maximum fan-out node                        ; clock_divider:clock_divider|altpll:altpll_component|clock_divider_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 41                                                                                                       ;
-; Total fan-out                               ; 926                                                                                                      ;
-; Average fan-out                             ; 2.66                                                                                                     ;
+; Maximum fan-out                             ; 82                                                                                                       ;
+; Total fan-out                               ; 1256                                                                                                     ;
+; Average fan-out                             ; 2.61                                                                                                     ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -243,7 +243,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                     ; Entity Name          ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |Monitor_Tester                                ; 209 (81)            ; 82 (7)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |Monitor_Tester                                                                                         ; Monitor_Tester       ; work         ;
+; |Monitor_Tester                                ; 301 (81)            ; 123 (7)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |Monitor_Tester                                                                                         ; Monitor_Tester       ; work         ;
 ;    |VGA:VGA|                                   ; 64 (64)             ; 40 (40)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|VGA:VGA                                                                                 ; VGA                  ; work         ;
 ;    |clock_divider:clock_divider|               ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|clock_divider:clock_divider                                                             ; clock_divider        ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|clock_divider:clock_divider|altpll:altpll_component                                     ; altpll               ; work         ;
@@ -259,7 +259,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |my_dff:d1|                              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|debounce:debounce2|my_dff:d1                                                            ; my_dff               ; work         ;
 ;       |my_dff:d2|                              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|debounce:debounce2|my_dff:d2                                                            ; my_dff               ; work         ;
 ;    |gridPattern:gridPattern|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|gridPattern:gridPattern                                                                 ; gridPattern          ; work         ;
-;    |screenSaverPattern:screenSavePattern|      ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|screenSaverPattern:screenSavePattern                                                    ; screenSaverPattern   ; work         ;
+;    |screenSaverPattern:screenSavePattern|      ; 103 (103)           ; 41 (41)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|screenSaverPattern:screenSavePattern                                                    ; screenSaverPattern   ; work         ;
 ;    |tvPattern:tvPattern|                       ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Monitor_Tester|tvPattern:tvPattern                                                                     ; tvPattern            ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -296,46 +296,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                              ;
-+-------------------------------------------------------+---------------------------------------------------------+
-; Register name                                         ; Reason for Removal                                      ;
-+-------------------------------------------------------+---------------------------------------------------------+
-; screenSaverPattern:screenSavePattern|ballX[0,1]       ; Stuck at GND due to stuck port clock                    ;
-; screenSaverPattern:screenSavePattern|ballX[2]         ; Stuck at VCC due to stuck port clock                    ;
-; screenSaverPattern:screenSavePattern|ballX[3,4]       ; Stuck at GND due to stuck port clock                    ;
-; screenSaverPattern:screenSavePattern|ballX[5,6]       ; Stuck at VCC due to stuck port clock                    ;
-; screenSaverPattern:screenSavePattern|ballX[7..9]      ; Stuck at GND due to stuck port clock                    ;
-; screenSaverPattern:screenSavePattern|prescaler[0..15] ; Stuck at GND due to stuck port clock                    ;
-; debounce:debounce2|clock_div:u1|counter[26]           ; Merged with debounce:debounce1|clock_div:u1|counter[26] ;
-; debounce:debounce2|clock_div:u1|counter[25]           ; Merged with debounce:debounce1|clock_div:u1|counter[25] ;
-; debounce:debounce2|clock_div:u1|counter[24]           ; Merged with debounce:debounce1|clock_div:u1|counter[24] ;
-; debounce:debounce2|clock_div:u1|counter[23]           ; Merged with debounce:debounce1|clock_div:u1|counter[23] ;
-; debounce:debounce2|clock_div:u1|counter[22]           ; Merged with debounce:debounce1|clock_div:u1|counter[22] ;
-; debounce:debounce2|clock_div:u1|counter[21]           ; Merged with debounce:debounce1|clock_div:u1|counter[21] ;
-; debounce:debounce2|clock_div:u1|counter[20]           ; Merged with debounce:debounce1|clock_div:u1|counter[20] ;
-; debounce:debounce2|clock_div:u1|counter[19]           ; Merged with debounce:debounce1|clock_div:u1|counter[19] ;
-; debounce:debounce2|clock_div:u1|counter[18]           ; Merged with debounce:debounce1|clock_div:u1|counter[18] ;
-; debounce:debounce2|clock_div:u1|counter[17]           ; Merged with debounce:debounce1|clock_div:u1|counter[17] ;
-; debounce:debounce2|clock_div:u1|counter[16]           ; Merged with debounce:debounce1|clock_div:u1|counter[16] ;
-; debounce:debounce2|clock_div:u1|counter[15]           ; Merged with debounce:debounce1|clock_div:u1|counter[15] ;
-; debounce:debounce2|clock_div:u1|counter[14]           ; Merged with debounce:debounce1|clock_div:u1|counter[14] ;
-; debounce:debounce2|clock_div:u1|counter[13]           ; Merged with debounce:debounce1|clock_div:u1|counter[13] ;
-; debounce:debounce2|clock_div:u1|counter[12]           ; Merged with debounce:debounce1|clock_div:u1|counter[12] ;
-; debounce:debounce2|clock_div:u1|counter[11]           ; Merged with debounce:debounce1|clock_div:u1|counter[11] ;
-; debounce:debounce2|clock_div:u1|counter[10]           ; Merged with debounce:debounce1|clock_div:u1|counter[10] ;
-; debounce:debounce2|clock_div:u1|counter[9]            ; Merged with debounce:debounce1|clock_div:u1|counter[9]  ;
-; debounce:debounce2|clock_div:u1|counter[8]            ; Merged with debounce:debounce1|clock_div:u1|counter[8]  ;
-; debounce:debounce2|clock_div:u1|counter[7]            ; Merged with debounce:debounce1|clock_div:u1|counter[7]  ;
-; debounce:debounce2|clock_div:u1|counter[6]            ; Merged with debounce:debounce1|clock_div:u1|counter[6]  ;
-; debounce:debounce2|clock_div:u1|counter[5]            ; Merged with debounce:debounce1|clock_div:u1|counter[5]  ;
-; debounce:debounce2|clock_div:u1|counter[4]            ; Merged with debounce:debounce1|clock_div:u1|counter[4]  ;
-; debounce:debounce2|clock_div:u1|counter[3]            ; Merged with debounce:debounce1|clock_div:u1|counter[3]  ;
-; debounce:debounce2|clock_div:u1|counter[2]            ; Merged with debounce:debounce1|clock_div:u1|counter[2]  ;
-; debounce:debounce2|clock_div:u1|counter[1]            ; Merged with debounce:debounce1|clock_div:u1|counter[1]  ;
-; debounce:debounce2|clock_div:u1|counter[0]            ; Merged with debounce:debounce1|clock_div:u1|counter[0]  ;
-; Total Number of Removed Registers = 53                ;                                                         ;
-+-------------------------------------------------------+---------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++---------------------------------------------+---------------------------------------------------------+
+; Register name                               ; Reason for Removal                                      ;
++---------------------------------------------+---------------------------------------------------------+
+; debounce:debounce2|clock_div:u1|counter[26] ; Merged with debounce:debounce1|clock_div:u1|counter[26] ;
+; debounce:debounce2|clock_div:u1|counter[25] ; Merged with debounce:debounce1|clock_div:u1|counter[25] ;
+; debounce:debounce2|clock_div:u1|counter[24] ; Merged with debounce:debounce1|clock_div:u1|counter[24] ;
+; debounce:debounce2|clock_div:u1|counter[23] ; Merged with debounce:debounce1|clock_div:u1|counter[23] ;
+; debounce:debounce2|clock_div:u1|counter[22] ; Merged with debounce:debounce1|clock_div:u1|counter[22] ;
+; debounce:debounce2|clock_div:u1|counter[21] ; Merged with debounce:debounce1|clock_div:u1|counter[21] ;
+; debounce:debounce2|clock_div:u1|counter[20] ; Merged with debounce:debounce1|clock_div:u1|counter[20] ;
+; debounce:debounce2|clock_div:u1|counter[19] ; Merged with debounce:debounce1|clock_div:u1|counter[19] ;
+; debounce:debounce2|clock_div:u1|counter[18] ; Merged with debounce:debounce1|clock_div:u1|counter[18] ;
+; debounce:debounce2|clock_div:u1|counter[17] ; Merged with debounce:debounce1|clock_div:u1|counter[17] ;
+; debounce:debounce2|clock_div:u1|counter[16] ; Merged with debounce:debounce1|clock_div:u1|counter[16] ;
+; debounce:debounce2|clock_div:u1|counter[15] ; Merged with debounce:debounce1|clock_div:u1|counter[15] ;
+; debounce:debounce2|clock_div:u1|counter[14] ; Merged with debounce:debounce1|clock_div:u1|counter[14] ;
+; debounce:debounce2|clock_div:u1|counter[13] ; Merged with debounce:debounce1|clock_div:u1|counter[13] ;
+; debounce:debounce2|clock_div:u1|counter[12] ; Merged with debounce:debounce1|clock_div:u1|counter[12] ;
+; debounce:debounce2|clock_div:u1|counter[11] ; Merged with debounce:debounce1|clock_div:u1|counter[11] ;
+; debounce:debounce2|clock_div:u1|counter[10] ; Merged with debounce:debounce1|clock_div:u1|counter[10] ;
+; debounce:debounce2|clock_div:u1|counter[9]  ; Merged with debounce:debounce1|clock_div:u1|counter[9]  ;
+; debounce:debounce2|clock_div:u1|counter[8]  ; Merged with debounce:debounce1|clock_div:u1|counter[8]  ;
+; debounce:debounce2|clock_div:u1|counter[7]  ; Merged with debounce:debounce1|clock_div:u1|counter[7]  ;
+; debounce:debounce2|clock_div:u1|counter[6]  ; Merged with debounce:debounce1|clock_div:u1|counter[6]  ;
+; debounce:debounce2|clock_div:u1|counter[5]  ; Merged with debounce:debounce1|clock_div:u1|counter[5]  ;
+; debounce:debounce2|clock_div:u1|counter[4]  ; Merged with debounce:debounce1|clock_div:u1|counter[4]  ;
+; debounce:debounce2|clock_div:u1|counter[3]  ; Merged with debounce:debounce1|clock_div:u1|counter[3]  ;
+; debounce:debounce2|clock_div:u1|counter[2]  ; Merged with debounce:debounce1|clock_div:u1|counter[2]  ;
+; debounce:debounce2|clock_div:u1|counter[1]  ; Merged with debounce:debounce1|clock_div:u1|counter[1]  ;
+; debounce:debounce2|clock_div:u1|counter[0]  ; Merged with debounce:debounce1|clock_div:u1|counter[0]  ;
+; Total Number of Removed Registers = 27      ;                                                         ;
++---------------------------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -343,24 +337,27 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 82    ;
-; Number of registers using Synchronous Clear  ; 63    ;
+; Total registers                              ; 123   ;
+; Number of registers using Synchronous Clear  ; 94    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; currentMode[0]                         ; 11      ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; screenSaverPattern:screenSavePattern|ballX[6] ; 3       ;
+; screenSaverPattern:screenSavePattern|ballX[5] ; 3       ;
+; screenSaverPattern:screenSavePattern|ballX[2] ; 3       ;
+; currentMode[0]                                ; 11      ;
+; Total number of inverted registers = 4        ;         ;
++-----------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -881,24 +878,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 82                          ;
-;     ENA               ; 4                           ;
+; cycloneiii_ff         ; 123                         ;
+;     ENA               ; 14                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 53                          ;
+;     SCLR              ; 84                          ;
 ;     plain             ; 15                          ;
-; cycloneiii_lcell_comb ; 211                         ;
-;     arith             ; 66                          ;
-;         2 data inputs ; 66                          ;
-;     normal            ; 145                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 108                         ;
+; cycloneiii_lcell_comb ; 303                         ;
+;     arith             ; 139                         ;
+;         2 data inputs ; 119                         ;
+;         3 data inputs ; 20                          ;
+;     normal            ; 164                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 111                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 4.34                        ;
+; Average LUT depth     ; 4.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -917,7 +915,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Fri Dec  9 14:50:03 2022
+    Info: Processing started: Fri Dec  9 16:32:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_Tester -c VGA_Tester
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -941,7 +939,6 @@ Info (12021): Found 3 design units, including 3 entities, in source file debounc
     Info (12023): Found entity 1: debounce File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/debounce.v Line: 1
     Info (12023): Found entity 2: clock_div File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/debounce.v Line: 13
     Info (12023): Found entity 3: my_dff File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/debounce.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at Monitor_Tester.v(149): created implicit net for "clock25Mhz" File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/Monitor_Tester.v Line: 149
 Warning (10236): Verilog HDL Implicit Net warning at Monitor_Tester.v(149): created implicit net for "btn_next" File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/Monitor_Tester.v Line: 149
 Info (12127): Elaborating entity "Monitor_Tester" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at Monitor_Tester.v(54): truncated value with size 32 to match size of target (31) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/Monitor_Tester.v Line: 54
@@ -1132,11 +1129,11 @@ Warning (10230): Verilog HDL assignment warning at gridPattern.v(12): truncated 
 Warning (10230): Verilog HDL assignment warning at gridPattern.v(13): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/gridPattern.v Line: 13
 Warning (10230): Verilog HDL assignment warning at gridPattern.v(14): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/gridPattern.v Line: 14
 Info (12128): Elaborating entity "screenSaverPattern" for hierarchy "screenSaverPattern:screenSavePattern" File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/Monitor_Tester.v Line: 149
-Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(19): truncated value with size 32 to match size of target (16) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 19
-Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(26): truncated value with size 32 to match size of target (10) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 26
-Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(36): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 36
-Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(37): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 37
-Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(38): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 38
+Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(19): truncated value with size 32 to match size of target (31) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 19
+Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(22): truncated value with size 32 to match size of target (10) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 22
+Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(30): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 30
+Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(31): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 31
+Warning (10230): Verilog HDL assignment warning at screenSaverPattern.v(32): truncated value with size 32 to match size of target (4) File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 32
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "red[1]$latch" merged with LATCH primitive "red[0]$latch" File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/Monitor_Tester.v Line: 151
@@ -1159,14 +1156,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 338 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 217 logic cells
+    Info (21061): Implemented 309 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 124 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
     Info: Peak virtual memory: 458 megabytes
-    Info: Processing ended: Fri Dec  9 14:50:09 2022
+    Info: Processing ended: Fri Dec  9 16:32:45 2022
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:11
 
