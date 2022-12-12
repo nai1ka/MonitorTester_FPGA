@@ -1,5 +1,5 @@
 Timing Analyzer report for VGA_Tester
-Fri Dec  9 16:58:18 2022
+Mon Dec 12 12:39:22 2022
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -94,15 +94,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.43        ;
+; Average used               ; 1.33        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   8.8%      ;
-;     Processor 3            ;   8.6%      ;
-;     Processor 4            ;   8.6%      ;
-;     Processors 5-6         ;   8.6%      ;
+;     Processor 2            ;   6.8%      ;
+;     Processor 3            ;   6.6%      ;
+;     Processors 4-6         ;   6.6%      ;
 +----------------------------+-------------+
 
 
@@ -124,10 +123,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------+-----------------+-----------------------------------------------------------+------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name                                                ; Note                                           ;
 +-------------+-----------------+-----------------------------------------------------------+------------------------------------------------+
-; 64.8 MHz    ; 64.8 MHz        ; switches[0]                                               ;                                                ;
-; 93.31 MHz   ; 93.31 MHz       ; clock_divider|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
-; 188.64 MHz  ; 188.64 MHz      ; clock50MHz                                                ;                                                ;
-; 991.08 MHz  ; 416.15 MHz      ; debounce:debounce2|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
+; 62.16 MHz   ; 62.16 MHz       ; switches[0]                                               ;                                                ;
+; 102.94 MHz  ; 102.94 MHz      ; clock_divider|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
+; 199.52 MHz  ; 199.52 MHz      ; clock50MHz                                                ;                                                ;
+; 948.77 MHz  ; 416.15 MHz      ; debounce:debounce2|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
 ; 1160.09 MHz ; 416.15 MHz      ; debounce:debounce1|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
 +-------------+-----------------+-----------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -138,11 +137,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------+---------+---------------+
 ; Clock                                                     ; Slack   ; End Point TNS ;
 +-----------------------------------------------------------+---------+---------------+
-; switches[0]                                               ; -10.473 ; -30.240       ;
-; clock50MHz                                                ; -0.788  ; -4.747        ;
-; debounce:debounce2|clock_div:u1|slow_clk                  ; -0.009  ; -0.009        ;
+; switches[0]                                               ; -10.598 ; -31.349       ;
+; clock50MHz                                                ; -1.351  ; -7.642        ;
+; debounce:debounce2|clock_div:u1|slow_clk                  ; -0.054  ; -0.054        ;
 ; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.138   ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 29.090  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 30.093  ; 0.000         ;
 +-----------------------------------------------------------+---------+---------------+
 
 
@@ -151,11 +150,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -0.369 ; -0.601        ;
-; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.429  ; 0.000         ;
-; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.444  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.503  ; 0.000         ;
-; clock50MHz                                                ; 0.631  ; 0.000         ;
+; switches[0]                                               ; -0.720 ; -0.720        ;
+; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.426  ; 0.000         ;
+; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.427  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.428  ; 0.000         ;
+; clock50MHz                                                ; 0.513  ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -164,7 +163,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+-----------------+
 ; Clock       ; Slack  ; End Point TNS   ;
 +-------------+--------+-----------------+
-; switches[0] ; -8.002 ; -23.664         ;
+; switches[0] ; -8.627 ; -25.289         ;
 +-------------+--------+-----------------+
 
 
@@ -173,7 +172,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+-------+-----------------+
 ; Clock       ; Slack ; End Point TNS   ;
 +-------------+-------+-----------------+
-; switches[0] ; 3.028 ; 0.000           ;
+; switches[0] ; 3.664 ; 0.000           ;
 +-------------+-------+-----------------+
 
 
@@ -182,11 +181,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -3.000 ; -15.214       ;
+; switches[0]                                               ; -3.000 ; -13.130       ;
 ; debounce:debounce1|clock_div:u1|slow_clk                  ; -1.403 ; -4.209        ;
 ; debounce:debounce2|clock_div:u1|slow_clk                  ; -1.403 ; -4.209        ;
-; clock50MHz                                                ; 9.649  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 19.626 ; 0.000         ;
+; clock50MHz                                                ; 9.698  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 19.616 ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -202,11 +201,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------+-----------------+-----------------------------------------------------------+------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name                                                ; Note                                           ;
 +-------------+-----------------+-----------------------------------------------------------+------------------------------------------------+
-; 67.84 MHz   ; 67.84 MHz       ; switches[0]                                               ;                                                ;
-; 100.04 MHz  ; 100.04 MHz      ; clock_divider|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
-; 204.67 MHz  ; 204.67 MHz      ; clock50MHz                                                ;                                                ;
-; 1078.75 MHz ; 416.15 MHz      ; debounce:debounce2|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
-; 1273.89 MHz ; 416.15 MHz      ; debounce:debounce1|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
+; 63.99 MHz   ; 63.99 MHz       ; switches[0]                                               ;                                                ;
+; 112.17 MHz  ; 112.17 MHz      ; clock_divider|altpll_component|auto_generated|pll1|clk[0] ;                                                ;
+; 216.97 MHz  ; 216.97 MHz      ; clock50MHz                                                ;                                                ;
+; 1031.99 MHz ; 416.15 MHz      ; debounce:debounce2|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
+; 1272.26 MHz ; 416.15 MHz      ; debounce:debounce1|clock_div:u1|slow_clk                  ; limit due to minimum period restriction (tmin) ;
 +-------------+-----------------+-----------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -216,11 +215,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------+---------+---------------+
 ; Clock                                                     ; Slack   ; End Point TNS ;
 +-----------------------------------------------------------+---------+---------------+
-; switches[0]                                               ; -10.077 ; -29.043       ;
-; clock50MHz                                                ; -0.597  ; -3.005        ;
-; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.073   ; 0.000         ;
-; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.215   ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 29.811  ; 0.000         ;
+; switches[0]                                               ; -10.250 ; -30.466       ;
+; clock50MHz                                                ; -1.152  ; -6.355        ;
+; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.031   ; 0.000         ;
+; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.214   ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 30.892  ; 0.000         ;
 +-----------------------------------------------------------+---------+---------------+
 
 
@@ -229,11 +228,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -0.363 ; -0.601        ;
-; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.393  ; 0.000         ;
-; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.412  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.424  ; 0.000         ;
-; clock50MHz                                                ; 0.446  ; 0.000         ;
+; switches[0]                                               ; -0.685 ; -0.685        ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.349  ; 0.000         ;
+; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.392  ; 0.000         ;
+; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.392  ; 0.000         ;
+; clock50MHz                                                ; 0.436  ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -242,7 +241,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+----------------+
 ; Clock       ; Slack  ; End Point TNS  ;
 +-------------+--------+----------------+
-; switches[0] ; -7.978 ; -23.619        ;
+; switches[0] ; -8.320 ; -24.508        ;
 +-------------+--------+----------------+
 
 
@@ -251,7 +250,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+-------+----------------+
 ; Clock       ; Slack ; End Point TNS  ;
 +-------------+-------+----------------+
-; switches[0] ; 2.971 ; 0.000          ;
+; switches[0] ; 3.535 ; 0.000          ;
 +-------------+-------+----------------+
 
 
@@ -260,11 +259,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -3.000 ; -12.928       ;
+; switches[0]                                               ; -3.000 ; -11.134       ;
 ; debounce:debounce1|clock_div:u1|slow_clk                  ; -1.403 ; -4.209        ;
 ; debounce:debounce2|clock_div:u1|slow_clk                  ; -1.403 ; -4.209        ;
-; clock50MHz                                                ; 9.718  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 19.609 ; 0.000         ;
+; clock50MHz                                                ; 9.671  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 19.593 ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -280,11 +279,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -4.965 ; -14.142       ;
-; clock50MHz                                                ; -0.001 ; -0.001        ;
-; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.565  ; 0.000         ;
-; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.621  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 34.530 ; 0.000         ;
+; switches[0]                                               ; -5.209 ; -15.190       ;
+; clock50MHz                                                ; -0.074 ; -0.296        ;
+; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.542  ; 0.000         ;
+; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.620  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 35.139 ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -293,11 +292,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -0.509 ; -0.920        ;
-; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.161  ; 0.000         ;
-; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.170  ; 0.000         ;
-; clock50MHz                                                ; 0.201  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.227  ; 0.000         ;
+; switches[0]                                               ; -0.361 ; -0.361        ;
+; clock50MHz                                                ; 0.157  ; 0.000         ;
+; debounce:debounce2|clock_div:u1|slow_clk                  ; 0.159  ; 0.000         ;
+; debounce:debounce1|clock_div:u1|slow_clk                  ; 0.160  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.210  ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -306,7 +305,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------+--------+----------------+
 ; Clock       ; Slack  ; End Point TNS  ;
 +-------------+--------+----------------+
-; switches[0] ; -4.022 ; -11.861        ;
+; switches[0] ; -4.915 ; -14.492        ;
 +-------------+--------+----------------+
 
 
@@ -315,7 +314,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------+-------+----------------+
 ; Clock       ; Slack ; End Point TNS  ;
 +-------------+-------+----------------+
-; switches[0] ; 1.337 ; 0.000          ;
+; switches[0] ; 1.835 ; 0.000          ;
 +-------------+-------+----------------+
 
 
@@ -324,11 +323,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------------------------------------+--------+---------------+
 ; Clock                                                     ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------+--------+---------------+
-; switches[0]                                               ; -3.000 ; -7.004        ;
+; switches[0]                                               ; -3.000 ; -6.164        ;
 ; debounce:debounce1|clock_div:u1|slow_clk                  ; -1.000 ; -3.000        ;
 ; debounce:debounce2|clock_div:u1|slow_clk                  ; -1.000 ; -3.000        ;
-; clock50MHz                                                ; 9.337  ; 0.000         ;
-; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 19.673 ; 0.000         ;
+; clock50MHz                                                ; 9.468  ; 0.000         ;
+; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 19.665 ; 0.000         ;
 +-----------------------------------------------------------+--------+---------------+
 
 
@@ -344,18 +343,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------------------+---------+--------+----------+---------+---------------------+
 ; Clock                                                      ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------------------------+---------+--------+----------+---------+---------------------+
-; Worst-case Slack                                           ; -10.473 ; -0.509 ; -8.002   ; 1.337   ; -3.000              ;
-;  clock50MHz                                                ; -0.788  ; 0.201  ; N/A      ; N/A     ; 9.337               ;
-;  clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 29.090  ; 0.227  ; N/A      ; N/A     ; 19.609              ;
-;  debounce:debounce1|clock_div:u1|slow_clk                  ; 0.138   ; 0.161  ; N/A      ; N/A     ; -1.403              ;
-;  debounce:debounce2|clock_div:u1|slow_clk                  ; -0.009  ; 0.170  ; N/A      ; N/A     ; -1.403              ;
-;  switches[0]                                               ; -10.473 ; -0.509 ; -8.002   ; 1.337   ; -3.000              ;
-; Design-wide TNS                                            ; -34.996 ; -0.92  ; -23.664  ; 0.0     ; -23.632             ;
-;  clock50MHz                                                ; -4.747  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+; Worst-case Slack                                           ; -10.598 ; -0.720 ; -8.627   ; 1.835   ; -3.000              ;
+;  clock50MHz                                                ; -1.351  ; 0.157  ; N/A      ; N/A     ; 9.468               ;
+;  clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 30.093  ; 0.210  ; N/A      ; N/A     ; 19.593              ;
+;  debounce:debounce1|clock_div:u1|slow_clk                  ; 0.138   ; 0.160  ; N/A      ; N/A     ; -1.403              ;
+;  debounce:debounce2|clock_div:u1|slow_clk                  ; -0.054  ; 0.159  ; N/A      ; N/A     ; -1.403              ;
+;  switches[0]                                               ; -10.598 ; -0.720 ; -8.627   ; 1.835   ; -3.000              ;
+; Design-wide TNS                                            ; -39.045 ; -0.72  ; -25.289  ; 0.0     ; -21.548             ;
+;  clock50MHz                                                ; -7.642  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 ;  clock_divider|altpll_component|auto_generated|pll1|clk[0] ; 0.000   ; 0.000  ; N/A      ; N/A     ; 0.000               ;
 ;  debounce:debounce1|clock_div:u1|slow_clk                  ; 0.000   ; 0.000  ; N/A      ; N/A     ; -4.209              ;
-;  debounce:debounce2|clock_div:u1|slow_clk                  ; -0.009  ; 0.000  ; N/A      ; N/A     ; -4.209              ;
-;  switches[0]                                               ; -30.240 ; -0.920 ; -23.664  ; 0.000   ; -15.214             ;
+;  debounce:debounce2|clock_div:u1|slow_clk                  ; -0.054  ; 0.000  ; N/A      ; N/A     ; -4.209              ;
+;  switches[0]                                               ; -31.349 ; -0.720 ; -25.289  ; 0.000   ; -13.130             ;
 +------------------------------------------------------------+---------+--------+----------+---------+---------------------+
 
 
@@ -378,7 +377,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; green[3]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; hsync        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vsync        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; testLED      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -430,7 +428,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; green[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; hsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; vsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; testLED      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0407 V           ; 0.211 V                              ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0407 V          ; 0.211 V                             ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -454,7 +451,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; green[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; hsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; vsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; testLED      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0174 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.22e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0174 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.22e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -478,7 +474,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; green[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; hsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; vsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; testLED      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0396 V           ; 0.362 V                              ; 0.108 V                              ; 3.11e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0396 V          ; 0.362 V                             ; 0.108 V                             ; 3.11e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -496,7 +491,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; debounce:debounce2|clock_div:u1|slow_clk                  ; debounce:debounce2|clock_div:u1|slow_clk                  ; 2        ; 0        ; 0        ; 0        ;
 ; clock50MHz                                                ; switches[0]                                               ; 64       ; 0        ; 64       ; 0        ;
 ; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; switches[0]                                               ; 2928     ; 0        ; 2928     ; 0        ;
-; switches[0]                                               ; switches[0]                                               ; 198      ; 198      ; 198      ; 198      ;
+; switches[0]                                               ; switches[0]                                               ; 186      ; 186      ; 186      ; 186      ;
 +-----------------------------------------------------------+-----------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -514,7 +509,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; debounce:debounce2|clock_div:u1|slow_clk                  ; debounce:debounce2|clock_div:u1|slow_clk                  ; 2        ; 0        ; 0        ; 0        ;
 ; clock50MHz                                                ; switches[0]                                               ; 64       ; 0        ; 64       ; 0        ;
 ; clock_divider|altpll_component|auto_generated|pll1|clk[0] ; switches[0]                                               ; 2928     ; 0        ; 2928     ; 0        ;
-; switches[0]                                               ; switches[0]                                               ; 198      ; 198      ; 198      ; 198      ;
+; switches[0]                                               ; switches[0]                                               ; 186      ; 186      ; 186      ; 186      ;
 +-----------------------------------------------------------+-----------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -666,7 +661,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Fri Dec  9 16:58:17 2022
+    Info: Processing started: Mon Dec 12 12:39:21 2022
 Info: Command: quartus_sta VGA_Tester -c VGA_Tester
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -690,38 +685,38 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.473
+Info (332146): Worst-case setup slack is -10.598
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.473             -30.240 switches[0] 
-    Info (332119):    -0.788              -4.747 clock50MHz 
-    Info (332119):    -0.009              -0.009 debounce:debounce2|clock_div:u1|slow_clk 
+    Info (332119):   -10.598             -31.349 switches[0] 
+    Info (332119):    -1.351              -7.642 clock50MHz 
+    Info (332119):    -0.054              -0.054 debounce:debounce2|clock_div:u1|slow_clk 
     Info (332119):     0.138               0.000 debounce:debounce1|clock_div:u1|slow_clk 
-    Info (332119):    29.090               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is -0.369
+    Info (332119):    30.093               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.720
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.369              -0.601 switches[0] 
-    Info (332119):     0.429               0.000 debounce:debounce1|clock_div:u1|slow_clk 
-    Info (332119):     0.444               0.000 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     0.503               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.631               0.000 clock50MHz 
-Info (332146): Worst-case recovery slack is -8.002
+    Info (332119):    -0.720              -0.720 switches[0] 
+    Info (332119):     0.426               0.000 debounce:debounce2|clock_div:u1|slow_clk 
+    Info (332119):     0.427               0.000 debounce:debounce1|clock_div:u1|slow_clk 
+    Info (332119):     0.428               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.513               0.000 clock50MHz 
+Info (332146): Worst-case recovery slack is -8.627
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.002             -23.664 switches[0] 
-Info (332146): Worst-case removal slack is 3.028
+    Info (332119):    -8.627             -25.289 switches[0] 
+Info (332146): Worst-case removal slack is 3.664
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.028               0.000 switches[0] 
+    Info (332119):     3.664               0.000 switches[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -15.214 switches[0] 
+    Info (332119):    -3.000             -13.130 switches[0] 
     Info (332119):    -1.403              -4.209 debounce:debounce1|clock_div:u1|slow_clk 
     Info (332119):    -1.403              -4.209 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     9.649               0.000 clock50MHz 
-    Info (332119):    19.626               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.698               0.000 clock50MHz 
+    Info (332119):    19.616               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
@@ -729,82 +724,82 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.077
+Info (332146): Worst-case setup slack is -10.250
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.077             -29.043 switches[0] 
-    Info (332119):    -0.597              -3.005 clock50MHz 
-    Info (332119):     0.073               0.000 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     0.215               0.000 debounce:debounce1|clock_div:u1|slow_clk 
-    Info (332119):    29.811               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is -0.363
+    Info (332119):   -10.250             -30.466 switches[0] 
+    Info (332119):    -1.152              -6.355 clock50MHz 
+    Info (332119):     0.031               0.000 debounce:debounce2|clock_div:u1|slow_clk 
+    Info (332119):     0.214               0.000 debounce:debounce1|clock_div:u1|slow_clk 
+    Info (332119):    30.892               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.685
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.363              -0.601 switches[0] 
-    Info (332119):     0.393               0.000 debounce:debounce1|clock_div:u1|slow_clk 
-    Info (332119):     0.412               0.000 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     0.424               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.446               0.000 clock50MHz 
-Info (332146): Worst-case recovery slack is -7.978
+    Info (332119):    -0.685              -0.685 switches[0] 
+    Info (332119):     0.349               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.392               0.000 debounce:debounce1|clock_div:u1|slow_clk 
+    Info (332119):     0.392               0.000 debounce:debounce2|clock_div:u1|slow_clk 
+    Info (332119):     0.436               0.000 clock50MHz 
+Info (332146): Worst-case recovery slack is -8.320
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.978             -23.619 switches[0] 
-Info (332146): Worst-case removal slack is 2.971
+    Info (332119):    -8.320             -24.508 switches[0] 
+Info (332146): Worst-case removal slack is 3.535
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.971               0.000 switches[0] 
+    Info (332119):     3.535               0.000 switches[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -12.928 switches[0] 
+    Info (332119):    -3.000             -11.134 switches[0] 
     Info (332119):    -1.403              -4.209 debounce:debounce1|clock_div:u1|slow_clk 
     Info (332119):    -1.403              -4.209 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     9.718               0.000 clock50MHz 
-    Info (332119):    19.609               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.671               0.000 clock50MHz 
+    Info (332119):    19.593               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.965
+Info (332146): Worst-case setup slack is -5.209
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.965             -14.142 switches[0] 
-    Info (332119):    -0.001              -0.001 clock50MHz 
-    Info (332119):     0.565               0.000 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     0.621               0.000 debounce:debounce1|clock_div:u1|slow_clk 
-    Info (332119):    34.530               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is -0.509
+    Info (332119):    -5.209             -15.190 switches[0] 
+    Info (332119):    -0.074              -0.296 clock50MHz 
+    Info (332119):     0.542               0.000 debounce:debounce2|clock_div:u1|slow_clk 
+    Info (332119):     0.620               0.000 debounce:debounce1|clock_div:u1|slow_clk 
+    Info (332119):    35.139               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.361
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.509              -0.920 switches[0] 
-    Info (332119):     0.161               0.000 debounce:debounce1|clock_div:u1|slow_clk 
-    Info (332119):     0.170               0.000 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     0.201               0.000 clock50MHz 
-    Info (332119):     0.227               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case recovery slack is -4.022
+    Info (332119):    -0.361              -0.361 switches[0] 
+    Info (332119):     0.157               0.000 clock50MHz 
+    Info (332119):     0.159               0.000 debounce:debounce2|clock_div:u1|slow_clk 
+    Info (332119):     0.160               0.000 debounce:debounce1|clock_div:u1|slow_clk 
+    Info (332119):     0.210               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case recovery slack is -4.915
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.022             -11.861 switches[0] 
-Info (332146): Worst-case removal slack is 1.337
+    Info (332119):    -4.915             -14.492 switches[0] 
+Info (332146): Worst-case removal slack is 1.835
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.337               0.000 switches[0] 
+    Info (332119):     1.835               0.000 switches[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -7.004 switches[0] 
+    Info (332119):    -3.000              -6.164 switches[0] 
     Info (332119):    -1.000              -3.000 debounce:debounce1|clock_div:u1|slow_clk 
     Info (332119):    -1.000              -3.000 debounce:debounce2|clock_div:u1|slow_clk 
-    Info (332119):     9.337               0.000 clock50MHz 
-    Info (332119):    19.673               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     9.468               0.000 clock50MHz 
+    Info (332119):    19.665               0.000 clock_divider|altpll_component|auto_generated|pll1|clk[0] 
 Info (332114): Report Metastability: Found 2 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 581 megabytes
-    Info: Processing ended: Fri Dec  9 16:58:18 2022
+    Info: Peak virtual memory: 579 megabytes
+    Info: Processing ended: Mon Dec 12 12:39:22 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 

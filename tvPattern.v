@@ -13,7 +13,7 @@ if(x>=0 && x<91*1) // White
 		green <= 4'hF;
 		blue <= 4'hF;
 	end
-	else if(x>=91*1 && x<91*2) //Yellow
+	else if(x>=91*1 && x<91*2) // Yellow
 	begin
 		red <= 4'hF;
 		blue <=  0;
@@ -25,25 +25,25 @@ if(x>=0 && x<91*1) // White
 		blue <=  4'hF;
 		green <= 4'hF;
 	end
-	else if(x>=91*3 && x<91*4) //Green
+	else if(x>=91*3 && x<91*4) // Green
 	begin
 		red <= 0;
 		blue <=  0;
 		green <= 4'hF;
 	end
-	else if(x>=91*4 && x<91*5) //Magenta
+	else if(x>=91*4 && x<91*5) // Magenta
 	begin
 		red <= 4'hF;
 		blue <=  4'hF;
 		green <= 0;
 	end
-	else if(x>=91*5 && x<91*6)
+	else if(x>=91*5 && x<91*6) // Red
 	begin
 		red <= 4'hF;
 		blue <= 0;
 		green <= 0;
 	end
-	else if(x>=91*6 && x<91*7)
+	else if(x>=91*6 && x<91*7) // Blue
 	begin
 		red <= 0;
 		blue <= 4'hF;

@@ -3,56 +3,56 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'switches[0]'
-Slack : -10.473
-TNS   : -30.240
+Slack : -10.598
+TNS   : -31.349
 
 Type  : Slow 1200mV 85C Model Setup 'clock50MHz'
-Slack : -0.788
-TNS   : -4.747
+Slack : -1.351
+TNS   : -7.642
 
 Type  : Slow 1200mV 85C Model Setup 'debounce:debounce2|clock_div:u1|slow_clk'
-Slack : -0.009
-TNS   : -0.009
+Slack : -0.054
+TNS   : -0.054
 
 Type  : Slow 1200mV 85C Model Setup 'debounce:debounce1|clock_div:u1|slow_clk'
 Slack : 0.138
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 29.090
+Slack : 30.093
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'switches[0]'
-Slack : -0.369
-TNS   : -0.601
-
-Type  : Slow 1200mV 85C Model Hold 'debounce:debounce1|clock_div:u1|slow_clk'
-Slack : 0.429
-TNS   : 0.000
+Slack : -0.720
+TNS   : -0.720
 
 Type  : Slow 1200mV 85C Model Hold 'debounce:debounce2|clock_div:u1|slow_clk'
-Slack : 0.444
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debounce:debounce1|clock_div:u1|slow_clk'
+Slack : 0.427
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.503
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock50MHz'
-Slack : 0.631
+Slack : 0.513
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'switches[0]'
-Slack : -8.002
-TNS   : -23.664
+Slack : -8.627
+TNS   : -25.289
 
 Type  : Slow 1200mV 85C Model Removal 'switches[0]'
-Slack : 3.028
+Slack : 3.664
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'switches[0]'
 Slack : -3.000
-TNS   : -15.214
+TNS   : -13.130
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debounce:debounce1|clock_div:u1|slow_clk'
 Slack : -1.403
@@ -63,64 +63,64 @@ Slack : -1.403
 TNS   : -4.209
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock50MHz'
-Slack : 9.649
+Slack : 9.698
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.626
+Slack : 19.616
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'switches[0]'
-Slack : -10.077
-TNS   : -29.043
+Slack : -10.250
+TNS   : -30.466
 
 Type  : Slow 1200mV 0C Model Setup 'clock50MHz'
-Slack : -0.597
-TNS   : -3.005
+Slack : -1.152
+TNS   : -6.355
 
 Type  : Slow 1200mV 0C Model Setup 'debounce:debounce2|clock_div:u1|slow_clk'
-Slack : 0.073
+Slack : 0.031
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'debounce:debounce1|clock_div:u1|slow_clk'
-Slack : 0.215
+Slack : 0.214
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 29.811
+Slack : 30.892
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'switches[0]'
-Slack : -0.363
-TNS   : -0.601
+Slack : -0.685
+TNS   : -0.685
+
+Type  : Slow 1200mV 0C Model Hold 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.349
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'debounce:debounce1|clock_div:u1|slow_clk'
-Slack : 0.393
+Slack : 0.392
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'debounce:debounce2|clock_div:u1|slow_clk'
-Slack : 0.412
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.424
+Slack : 0.392
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock50MHz'
-Slack : 0.446
+Slack : 0.436
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'switches[0]'
-Slack : -7.978
-TNS   : -23.619
+Slack : -8.320
+TNS   : -24.508
 
 Type  : Slow 1200mV 0C Model Removal 'switches[0]'
-Slack : 2.971
+Slack : 3.535
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'switches[0]'
 Slack : -3.000
-TNS   : -12.928
+TNS   : -11.134
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debounce:debounce1|clock_div:u1|slow_clk'
 Slack : -1.403
@@ -131,64 +131,64 @@ Slack : -1.403
 TNS   : -4.209
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock50MHz'
-Slack : 9.718
+Slack : 9.671
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.609
+Slack : 19.593
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'switches[0]'
-Slack : -4.965
-TNS   : -14.142
+Slack : -5.209
+TNS   : -15.190
 
 Type  : Fast 1200mV 0C Model Setup 'clock50MHz'
-Slack : -0.001
-TNS   : -0.001
+Slack : -0.074
+TNS   : -0.296
 
 Type  : Fast 1200mV 0C Model Setup 'debounce:debounce2|clock_div:u1|slow_clk'
-Slack : 0.565
+Slack : 0.542
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'debounce:debounce1|clock_div:u1|slow_clk'
-Slack : 0.621
+Slack : 0.620
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 34.530
+Slack : 35.139
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'switches[0]'
-Slack : -0.509
-TNS   : -0.920
+Slack : -0.361
+TNS   : -0.361
 
-Type  : Fast 1200mV 0C Model Hold 'debounce:debounce1|clock_div:u1|slow_clk'
-Slack : 0.161
+Type  : Fast 1200mV 0C Model Hold 'clock50MHz'
+Slack : 0.157
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'debounce:debounce2|clock_div:u1|slow_clk'
-Slack : 0.170
+Slack : 0.159
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clock50MHz'
-Slack : 0.201
+Type  : Fast 1200mV 0C Model Hold 'debounce:debounce1|clock_div:u1|slow_clk'
+Slack : 0.160
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.227
+Slack : 0.210
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'switches[0]'
-Slack : -4.022
-TNS   : -11.861
+Slack : -4.915
+TNS   : -14.492
 
 Type  : Fast 1200mV 0C Model Removal 'switches[0]'
-Slack : 1.337
+Slack : 1.835
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'switches[0]'
 Slack : -3.000
-TNS   : -7.004
+TNS   : -6.164
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debounce:debounce1|clock_div:u1|slow_clk'
 Slack : -1.000
@@ -199,11 +199,11 @@ Slack : -1.000
 TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock50MHz'
-Slack : 9.337
+Slack : 9.468
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.673
+Slack : 19.665
 TNS   : 0.000
 
 ------------------------------------------------------------

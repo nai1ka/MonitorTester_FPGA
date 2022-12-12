@@ -78,14 +78,14 @@ set_location_assignment PIN_A13 -to switches[6]
 set_location_assignment PIN_A14 -to switches[7]
 set_location_assignment PIN_B14 -to switches[8]
 set_location_assignment PIN_F15 -to switches[9]
-set_global_assignment -name VERILOG_FILE screenSaverPattern.v
+set_location_assignment PIN_B8 -to nextButton
+set_location_assignment PIN_A7 -to prevButton
+set_global_assignment -name VERILOG_FILE bouncingSquare.v
 set_global_assignment -name VERILOG_FILE Monitor_Tester.v
 set_global_assignment -name VERILOG_FILE VGA.v
 set_global_assignment -name QIP_FILE clock_divider.qip
 set_global_assignment -name VERILOG_FILE tvPattern.v
 set_global_assignment -name VERILOG_FILE fillColorPattern.v
 set_global_assignment -name VERILOG_FILE gridPattern.v
-set_location_assignment PIN_B8 -to nextButton
-set_location_assignment PIN_A7 -to prevButton
 set_global_assignment -name VERILOG_FILE debounce.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

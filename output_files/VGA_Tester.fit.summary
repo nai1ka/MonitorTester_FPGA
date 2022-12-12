@@ -1,15 +1,15 @@
-Fitter Status : Successful - Fri Dec  9 16:58:13 2022
+Fitter Status : Successful - Mon Dec 12 12:39:15 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : VGA_Tester
 Top-level Entity Name : Monitor_Tester
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 390 / 49,760 ( < 1 % )
-    Total combinational functions : 367 / 49,760 ( < 1 % )
+Total logic elements : 391 / 49,760 ( < 1 % )
+    Total combinational functions : 368 / 49,760 ( < 1 % )
     Dedicated logic registers : 134 / 49,760 ( < 1 % )
 Total registers : 134
-Total pins : 28 / 360 ( 8 % )
+Total pins : 27 / 360 ( 8 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

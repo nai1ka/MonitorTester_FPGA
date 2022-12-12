@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Dec  9 16:58:04 2022
+Analysis & Synthesis Status : Successful - Mon Dec 12 12:38:59 2022
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : VGA_Tester
 Top-level Entity Name : Monitor_Tester
 Family : MAX 10
-Total logic elements : 373
-    Total combinational functions : 366
+Total logic elements : 374
+    Total combinational functions : 367
     Dedicated logic registers : 134
 Total registers : 134
-Total pins : 28
+Total pins : 27
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
