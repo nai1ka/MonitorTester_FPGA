@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at screenSaverPattern.v(18): always construct contains both blocking and non-blocking assignments File: /home/nai1ka/intelFPGA_lite/21.1/VGA_Tester/screenSaverPattern.v Line: 18

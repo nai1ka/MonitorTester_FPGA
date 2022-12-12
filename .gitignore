@@ -13,3 +13,5 @@ tvPattern.v.bak
 VGA.v.bak
 vSync.v.bak
 .qsys_edit
+output_files/*
+!output_files/VGA_Tester.sof
